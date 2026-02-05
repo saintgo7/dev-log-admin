@@ -7,6 +7,22 @@ __pycache__/
 venv/
 env/
 ENV/
+*.pyc
+
+# Node.js (Phase 1부터)
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+.npm
+.yarn
+
+# Environment
+.env
+.env.local
+.env*.local
 
 # Database
 *.db
@@ -14,16 +30,33 @@ devlog.db
 
 # Logs
 *.log
+logs/
 /tmp/
+.server.pid
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.sublime-*
 
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # Temporary files
 *.tmp
+*.bak
+*.swp
+
+# Testing
+coverage/
+.nyc_output/
+.pytest_cache/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
