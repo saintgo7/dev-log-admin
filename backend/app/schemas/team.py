@@ -51,7 +51,7 @@ class TeamMemberUpdate(BaseSchema):
     role: str = Field(pattern=r"^(admin|member|viewer)$")
 
 
-class TeamMemberResponse(BaseSchema, TimestampSchema):
+class TeamMemberResponse(TimestampSchema):
     """Team member response schema"""
     user_id: str
     team_id: str

@@ -1,6 +1,4 @@
 # Services module - business logic layer
-<<<<<<< HEAD
-=======
 
 from app.services.auth_service import AuthService, AuthenticationError
 from app.services.github_oauth_service import GitHubOAuthService, GitHubOAuthError
@@ -30,4 +28,3 @@ __all__ = [
     "WebhookError",
     "WebhookSignatureError",
 ]
->>>>>>> feature/phase3-github-oauth

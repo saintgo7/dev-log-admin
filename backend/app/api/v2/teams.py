@@ -294,9 +294,9 @@ async def remove_team_member(
 @router.post("/{team_id}/transfer-ownership", status_code=status.HTTP_204_NO_CONTENT)
 async def transfer_team_ownership(
     team_id: str,
-    new_owner_id: str = Query(..., description="User ID of new owner"),
-    current_user: CurrentUser = Depends(),
-    db: AsyncSession = Depends(get_db)
+    current_user: CurrentUser,
+    db: AsyncSession = Depends(get_db),
+    new_owner_id: str = Query(..., description="User ID of new owner")
 ):
     """
     Transfer team ownership to another member

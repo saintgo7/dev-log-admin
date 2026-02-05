@@ -5,7 +5,7 @@ from typing import Optional, List
 from datetime import datetime
 from pydantic import BaseModel, Field, HttpUrl
 
-from app.schemas.base import BaseSchema, TimestampMixin
+from app.schemas.base import BaseSchema, TimestampSchema
 
 
 # ============================================================================
@@ -39,7 +39,7 @@ class GitHubConnectionCreate(BaseModel):
     state: str
 
 
-class GitHubConnectionResponse(BaseSchema, TimestampMixin):
+class GitHubConnectionResponse(TimestampSchema):
     """GitHub connection response"""
     id: str
     user_id: str
@@ -90,7 +90,7 @@ class GitHubRepositoryUpdate(BaseModel):
     sync_prs: Optional[bool] = None
 
 
-class GitHubRepositoryResponse(GitHubRepositoryBase, TimestampMixin):
+class GitHubRepositoryResponse(GitHubRepositoryBase, TimestampSchema):
     """GitHub repository response"""
     id: str
     project_id: str
@@ -139,7 +139,7 @@ class SyncRequest(BaseModel):
     full_sync: bool = False  # If true, sync all history, not just new
 
 
-class SyncHistoryResponse(BaseSchema, TimestampMixin):
+class SyncHistoryResponse(TimestampSchema):
     """Sync history entry"""
     id: str
     repository_id: str
@@ -257,7 +257,7 @@ class WebhookSetupResponse(BaseModel):
     url: str
 
 
-class WebhookEventResponse(BaseSchema, TimestampMixin):
+class WebhookEventResponse(TimestampSchema):
     """Webhook event record"""
     id: str
     repository_id: Optional[str] = None
