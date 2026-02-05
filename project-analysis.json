@@ -1,0 +1,1707 @@
+{
+  "timestamp": "2026-02-05T22:32:33.421321",
+  "summary": {
+    "total_projects": 56,
+    "git_repositories": 19,
+    "active_projects": 17,
+    "with_devlog_json": 11,
+    "without_devlog": 6
+  },
+  "projects": [
+    {
+      "name": "WebErpMes-v2",
+      "path": "/Users/saint/01_DEV/WebErpMes-v2",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/e2both/Web-SmartFactory-ErpMes.git",
+        "branch": "SFEM-1.0",
+        "total_commits": 1442,
+        "recent_commits": 188,
+        "last_commit_date": "2026-01-15",
+        "last_commit_message": "feat: 데모 서버 배포 설정 완성",
+        "authors": [
+          {
+            "name": "billyboy35",
+            "commits": 819
+          },
+          {
+            "name": "Kevin",
+            "commits": 505
+          },
+          {
+            "name": "dependabot[bot]",
+            "commits": 84
+          },
+          {
+            "name": "Xiaoguang Sun",
+            "commits": 11
+          },
+          {
+            "name": "Dzung Do",
+            "commits": 9
+          }
+        ],
+        "days_since_last_commit": 21
+      },
+      "files": {
+        "total": 1452,
+        "by_extension": {
+          ".php": 1289,
+          "[no ext]": 22,
+          ".png": 20,
+          ".md": 14,
+          ".pdf": 14,
+          ".js": 11,
+          ".odt": 11,
+          ".csv": 8,
+          ".json": 7,
+          ".css": 7
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "Docker"
+      ],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 446
+    },
+    {
+      "name": "saas-crew",
+      "path": "/Users/saint/01_DEV/saas-crew",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/saas-crew",
+        "branch": "develop",
+        "total_commits": 96,
+        "recent_commits": 96,
+        "last_commit_date": "2026-01-25",
+        "last_commit_message": "fix(web): fix public assets path and add missing i18n keys",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 93
+          },
+          {
+            "name": "saint",
+            "commits": 3
+          }
+        ],
+        "days_since_last_commit": 11
+      },
+      "files": {
+        "total": 2127,
+        "by_extension": {
+          ".webm": 516,
+          ".png": 342,
+          ".md": 339,
+          ".html": 260,
+          ".ts": 235,
+          ".tsx": 142,
+          ".js": 93,
+          ".json": 77,
+          ".rsc": 38,
+          "[no ext]": 13
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "Docker"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 10,
+      "score": 221
+    },
+    {
+      "name": "SaaS_erp_clone-260116",
+      "path": "/Users/saint/01_DEV/SaaS_erp_clone-260116",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/saas-kerp.git",
+        "branch": "phase/4-go-biz",
+        "total_commits": 68,
+        "recent_commits": 68,
+        "last_commit_date": "2026-01-26",
+        "last_commit_message": "feat(frontend): add optimized dashboard data fetching hook",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 70
+          },
+          {
+            "name": "copilot-swe-agent[bot]",
+            "commits": 3
+          },
+          {
+            "name": "SNT Go",
+            "commits": 1
+          }
+        ],
+        "days_since_last_commit": 10
+      },
+      "files": {
+        "total": 607,
+        "by_extension": {
+          ".go": 110,
+          ".md": 70,
+          ".tsx": 65,
+          ".py": 61,
+          ".html": 54,
+          ".ts": 48,
+          ".sql": 40,
+          ".png": 26,
+          "[no ext]": 22,
+          ".json": 21
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "Go Backend"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 7,
+      "score": 162
+    },
+    {
+      "name": "saas-erpmes-2601",
+      "path": "/Users/saint/01_DEV/saas-erpmes-2601",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/saas-erpmes-2601.git",
+        "branch": "feature/sprint1-dev-environment",
+        "total_commits": 49,
+        "recent_commits": 49,
+        "last_commit_date": "2026-01-31",
+        "last_commit_message": "feat(auth): auto-redirect to demo dashboard in demo mode",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 73
+          },
+          {
+            "name": "SNT Go",
+            "commits": 4
+          }
+        ],
+        "days_since_last_commit": 5
+      },
+      "files": {
+        "total": 1249,
+        "by_extension": {
+          ".html": 437,
+          ".go": 192,
+          ".ts": 144,
+          ".tsx": 144,
+          ".md": 119,
+          ".sql": 53,
+          ".yaml": 25,
+          ".yml": 23,
+          ".sh": 22,
+          ".json": 16
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "Go Backend",
+        "Docker"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 5,
+      "score": 132
+    },
+    {
+      "name": "app-passport-reserve",
+      "path": "/Users/saint/01_DEV/app-passport-reserve",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/app-passport-reserve.git",
+        "branch": "main",
+        "total_commits": 49,
+        "recent_commits": 34,
+        "last_commit_date": "2026-01-31",
+        "last_commit_message": "docs: add dev logs for OCR improvements",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 42
+          },
+          {
+            "name": "SNT Go",
+            "commits": 7
+          }
+        ],
+        "days_since_last_commit": 5
+      },
+      "files": {
+        "total": 289,
+        "by_extension": {
+          ".py": 66,
+          ".md": 54,
+          ".png": 34,
+          ".jpg": 28,
+          ".json": 25,
+          ".html": 24,
+          "[no ext]": 18,
+          ".tsx": 11,
+          ".yml": 6,
+          ".ts": 4
+        }
+      },
+      "types": [
+        "Python Backend",
+        "Docker"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 44,
+      "score": 102
+    },
+    {
+      "name": "web-music-heartlib",
+      "path": "/Users/saint/01_DEV/web-music-heartlib",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/web-music-heartlib.git",
+        "branch": "main",
+        "total_commits": 31,
+        "recent_commits": 31,
+        "last_commit_date": "2026-01-19",
+        "last_commit_message": "feat(installer): add ad-hoc code signing for macOS and installation guide",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 22
+          },
+          {
+            "name": "fishyi",
+            "commits": 7
+          },
+          {
+            "name": "FishYi",
+            "commits": 1
+          },
+          {
+            "name": "jinbridge",
+            "commits": 1
+          }
+        ],
+        "days_since_last_commit": 17
+      },
+      "files": {
+        "total": 184,
+        "by_extension": {
+          ".md": 53,
+          ".sh": 16,
+          ".tsx": 16,
+          ".ts": 15,
+          ".py": 15,
+          ".html": 13,
+          ".yml": 12,
+          ".js": 11,
+          ".json": 9,
+          "[no ext]": 8
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "Python Backend"
+      ],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 85
+    },
+    {
+      "name": "saas-ws-abada-co-kr",
+      "path": "/Users/saint/01_DEV/saas-ws-abada-co-kr",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/web-work-manager.git",
+        "branch": "main",
+        "total_commits": 61,
+        "recent_commits": 12,
+        "last_commit_date": "2026-02-04",
+        "last_commit_message": "docs: add infrastructure documentation",
+        "authors": [
+          {
+            "name": "SungHyun GO",
+            "commits": 40
+          },
+          {
+            "name": "blackpc",
+            "commits": 13
+          },
+          {
+            "name": "saintgo7",
+            "commits": 8
+          },
+          {
+            "name": "Developer",
+            "commits": 1
+          }
+        ],
+        "days_since_last_commit": 1
+      },
+      "files": {
+        "total": 306,
+        "by_extension": {
+          ".py": 89,
+          ".md": 61,
+          ".tsx": 61,
+          ".png": 22,
+          ".sh": 11,
+          "[no ext]": 9,
+          ".html": 8,
+          ".yml": 6,
+          ".ts": 6,
+          ".json": 5
+        }
+      },
+      "types": [
+        "Docker"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 18,
+      "score": 60
+    },
+    {
+      "name": "saas-orak",
+      "path": "/Users/saint/01_DEV/saas-orak",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/saas-orak.git",
+        "branch": "main",
+        "total_commits": 18,
+        "recent_commits": 18,
+        "last_commit_date": "2026-01-25",
+        "last_commit_message": "docs: add final dev log - project completion summary",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 18
+          }
+        ],
+        "days_since_last_commit": 11
+      },
+      "files": {
+        "total": 36,
+        "by_extension": {
+          ".md": 16,
+          ".json": 7,
+          ".tsx": 6,
+          ".ts": 6,
+          "[no ext]": 1
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "React Native"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 4,
+      "score": 57
+    },
+    {
+      "name": "app-hospital-yoyang",
+      "path": "/Users/saint/01_DEV/app-hospital-yoyang",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/app-hospital-yoyang.git",
+        "branch": "main",
+        "total_commits": 29,
+        "recent_commits": 9,
+        "last_commit_date": "2026-02-04",
+        "last_commit_message": "feat: add deployment execution script",
+        "authors": [
+          {
+            "name": "SungHyun Go",
+            "commits": 20
+          },
+          {
+            "name": "saintgo7",
+            "commits": 9
+          }
+        ],
+        "days_since_last_commit": 1
+      },
+      "files": {
+        "total": 187,
+        "by_extension": {
+          ".md": 51,
+          ".tsx": 37,
+          ".ts": 34,
+          "[no ext]": 10,
+          ".json": 9,
+          ".docx": 8,
+          ".html": 7,
+          ".sh": 6,
+          ".png": 6,
+          ".sql": 4
+        }
+      },
+      "types": [
+        "Web Frontend",
+        "Next.js",
+        "Docker"
+      ],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 50
+    },
+    {
+      "name": "saas-iso",
+      "path": "/Users/saint/01_DEV/saas-iso",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/saas-iso.git",
+        "branch": "main",
+        "total_commits": 9,
+        "recent_commits": 9,
+        "last_commit_date": "2026-02-01",
+        "last_commit_message": "feat(web): complete UI redesign based on PPT specifications",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 9
+          }
+        ],
+        "days_since_last_commit": 4
+      },
+      "files": {
+        "total": 383,
+        "by_extension": {
+          ".tsx": 143,
+          ".go": 89,
+          ".ts": 72,
+          ".sql": 22,
+          ".md": 19,
+          ".json": 13,
+          "[no ext]": 6,
+          ".example": 3,
+          ".sh": 3,
+          ".svg": 3
+        }
+      },
+      "types": [
+        "Go Backend"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 2,
+      "score": 48
+    },
+    {
+      "name": "01-template",
+      "path": "/Users/saint/01_DEV/01-template",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/saas-vibe.git",
+        "branch": "main",
+        "total_commits": 5,
+        "recent_commits": 5,
+        "last_commit_date": "2026-01-31",
+        "last_commit_message": "docs: add development log for AI document generation",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 5
+          }
+        ],
+        "days_since_last_commit": 5
+      },
+      "files": {
+        "total": 84,
+        "by_extension": {
+          ".md": 30,
+          ".ts": 19,
+          ".yml": 8,
+          ".json": 8,
+          "[no ext]": 5,
+          ".tsx": 4,
+          ".js": 3,
+          ".pem": 2,
+          ".sh": 2,
+          ".log": 1
+        }
+      },
+      "types": [],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 1,
+      "score": 40
+    },
+    {
+      "name": "26-SmartFactotyAX_Support",
+      "path": "/Users/saint/01_DEV/26-SmartFactotyAX_Support",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/web-SF-AX-support.git",
+        "branch": "main",
+        "total_commits": 9,
+        "recent_commits": 9,
+        "last_commit_date": "2026-01-13",
+        "last_commit_message": "docs: 개발 로그 및 Claude 설정 추가",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 10
+          }
+        ],
+        "days_since_last_commit": 23
+      },
+      "files": {
+        "total": 192,
+        "by_extension": {
+          ".py": 56,
+          ".ts": 43,
+          ".tsx": 41,
+          ".md": 21,
+          "[no ext]": 7,
+          ".json": 5,
+          ".png": 4,
+          ".js": 2,
+          ".example": 2,
+          ".dev": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 38
+    },
+    {
+      "name": "26-full-dev-log",
+      "path": "/Users/saint/01_DEV/26-full-dev-log",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/full-dev-log.git",
+        "branch": "develop",
+        "total_commits": 6,
+        "recent_commits": 6,
+        "last_commit_date": "2026-01-11",
+        "last_commit_message": "feat: add global DevLog scripts and documentation",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 6
+          }
+        ],
+        "days_since_last_commit": 25
+      },
+      "files": {
+        "total": 550,
+        "by_extension": {
+          ".html": 186,
+          ".ts": 159,
+          ".tsx": 73,
+          ".md": 37,
+          "[no ext]": 15,
+          ".json": 11,
+          ".go": 11,
+          ".js": 9,
+          ".yml": 7,
+          ".sh": 6
+        }
+      },
+      "types": [
+        "Docker"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 5,
+      "score": 32
+    },
+    {
+      "name": "26-web-skyair-TS",
+      "path": "/Users/saint/01_DEV/26-web-skyair-TS",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/skyair-travel.git",
+        "branch": "main",
+        "total_commits": 46,
+        "recent_commits": 4,
+        "last_commit_date": "2026-01-22",
+        "last_commit_message": "feat: 호텔 및 패키지 예약 시스템 구현",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 46
+          },
+          {
+            "name": "SNT Go",
+            "commits": 2
+          }
+        ],
+        "days_since_last_commit": 14
+      },
+      "files": {
+        "total": 385,
+        "by_extension": {
+          ".tsx": 113,
+          ".ts": 82,
+          ".md": 71,
+          ".png": 38,
+          ".docx": 34,
+          ".json": 12,
+          ".html": 9,
+          "[no ext]": 7,
+          ".mjs": 3,
+          ".local": 2
+        }
+      },
+      "types": [
+        "Web Frontend"
+      ],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 39,
+      "score": 32
+    },
+    {
+      "name": "test-devlog-project",
+      "path": "/Users/saint/01_DEV/test-devlog-project",
+      "git": {
+        "has_git": true,
+        "remote_url": null,
+        "branch": "main",
+        "total_commits": 1,
+        "recent_commits": 1,
+        "last_commit_date": "2026-02-05",
+        "last_commit_message": "initial commit",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 1
+          }
+        ],
+        "days_since_last_commit": 0
+      },
+      "files": {
+        "total": 27,
+        "by_extension": {
+          ".py": 9,
+          ".html": 8,
+          ".md": 3,
+          "[no ext]": 2,
+          ".sh": 2,
+          ".css": 1,
+          ".js": 1,
+          ".json": 1
+        }
+      },
+      "types": [],
+      "has_devlog": true,
+      "has_devlog_json": true,
+      "devlog_count": 1,
+      "score": 32
+    },
+    {
+      "name": "SmartFactoryAX_v0.1.2",
+      "path": "/Users/saint/01_DEV/SmartFactoryAX_v0.1.2",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/web-SF-AX-support.git",
+        "branch": "v0.1.2",
+        "total_commits": 3,
+        "recent_commits": 3,
+        "last_commit_date": "2026-01-11",
+        "last_commit_message": "config: Update ports for V0.1.2 to run alongside V0.1.1",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 10
+          }
+        ],
+        "days_since_last_commit": 25
+      },
+      "files": {
+        "total": 148,
+        "by_extension": {
+          ".py": 56,
+          ".tsx": 34,
+          ".ts": 22,
+          ".md": 17,
+          "[no ext]": 3,
+          ".json": 3,
+          ".js": 2,
+          ".example": 2,
+          ".dev": 2,
+          ".sql": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 26
+    },
+    {
+      "name": "SmartFactoryAX_v0.1.1",
+      "path": "/Users/saint/01_DEV/SmartFactoryAX_v0.1.1",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/web-SF-AX-support.git",
+        "branch": "HEAD",
+        "total_commits": 2,
+        "recent_commits": 2,
+        "last_commit_date": "2026-01-11",
+        "last_commit_message": "docs: Add comprehensive planning documents",
+        "authors": [
+          {
+            "name": "saintgo7",
+            "commits": 10
+          }
+        ],
+        "days_since_last_commit": 25
+      },
+      "files": {
+        "total": 148,
+        "by_extension": {
+          ".py": 56,
+          ".tsx": 34,
+          ".ts": 22,
+          ".md": 17,
+          "[no ext]": 3,
+          ".json": 3,
+          ".js": 2,
+          ".example": 2,
+          ".dev": 2,
+          ".sql": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 24
+    },
+    {
+      "name": "01_Claude_Code",
+      "path": "/Users/saint/01_DEV/01_Claude_Code",
+      "git": {
+        "has_git": true,
+        "remote_url": null,
+        "branch": null,
+        "total_commits": 0,
+        "recent_commits": 0,
+        "last_commit_date": null,
+        "last_commit_message": null,
+        "authors": [],
+        "days_since_last_commit": null
+      },
+      "files": {
+        "total": 51,
+        "by_extension": {
+          ".md": 29,
+          ".py": 13,
+          ".yaml": 7,
+          ".json": 1,
+          ".txt": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "09_HTML",
+      "path": "/Users/saint/01_DEV/09_HTML",
+      "git": null,
+      "files": {
+        "total": 10,
+        "by_extension": {
+          ".html": 9,
+          ".md": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "24-archive",
+      "path": "/Users/saint/01_DEV/24-archive",
+      "git": null,
+      "files": {
+        "total": 9937,
+        "by_extension": {
+          "[no ext]": 8677,
+          ".js": 333,
+          ".rb": 132,
+          ".png": 115,
+          ".dart": 100,
+          ".java": 83,
+          ".css": 70,
+          ".html": 61,
+          ".md": 43,
+          ".gif": 33
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-ai-projects",
+      "path": "/Users/saint/01_DEV/25-ai-projects",
+      "git": null,
+      "files": {
+        "total": 4083,
+        "by_extension": {
+          ".py": 1049,
+          ".md": 414,
+          ".csv": 388,
+          ".json": 264,
+          ".tsx": 261,
+          ".svg": 168,
+          "[no ext]": 163,
+          ".go": 155,
+          ".jsonl": 146,
+          ".png": 111
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-app-mobile",
+      "path": "/Users/saint/01_DEV/25-app-mobile",
+      "git": null,
+      "files": {
+        "total": 55364,
+        "by_extension": {
+          "[no ext]": 20919,
+          ".csv": 19845,
+          ".xlsx": 5357,
+          ".sql": 5076,
+          ".py": 1034,
+          ".rb": 441,
+          ".md": 230,
+          ".yaml": 199,
+          ".js": 182,
+          ".ts": 172
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-app-studio",
+      "path": "/Users/saint/01_DEV/25-app-studio",
+      "git": null,
+      "files": {
+        "total": 1822,
+        "by_extension": {
+          ".h": 716,
+          ".xcconfig": 108,
+          "[no ext]": 106,
+          ".png": 105,
+          ".plist": 105,
+          ".xcscheme": 69,
+          ".dart": 64,
+          ".json": 52,
+          ".xcfilelist": 50,
+          ".xml": 43
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-app-web",
+      "path": "/Users/saint/01_DEV/25-app-web",
+      "git": null,
+      "files": {
+        "total": 1766,
+        "by_extension": {
+          ".pak": 406,
+          ".ts": 202,
+          ".md": 185,
+          ".tsx": 173,
+          "[no ext]": 143,
+          ".png": 109,
+          ".docx": 100,
+          ".json": 71,
+          ".js": 65,
+          ".plist": 37
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-backend",
+      "path": "/Users/saint/01_DEV/25-backend",
+      "git": null,
+      "files": {
+        "total": 6882,
+        "by_extension": {
+          "[no ext]": 6058,
+          ".py": 171,
+          ".rb": 147,
+          ".html": 64,
+          ".yml": 48,
+          ".erb": 46,
+          ".js": 45,
+          ".md": 44,
+          ".json": 29,
+          ".tsx": 27
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-cpp",
+      "path": "/Users/saint/01_DEV/25-cpp",
+      "git": null,
+      "files": {
+        "total": 116,
+        "by_extension": {
+          "[no ext]": 19,
+          ".json": 17,
+          ".xml": 15,
+          ".txt": 10,
+          ".cmake": 8,
+          ".png": 6,
+          ".cpp": 5,
+          ".o": 5,
+          ".wav": 5,
+          ".ninja": 4
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-dotnet",
+      "path": "/Users/saint/01_DEV/25-dotnet",
+      "git": null,
+      "files": {
+        "total": 32,
+        "by_extension": {
+          ".cache": 5,
+          ".xml": 5,
+          "[no ext]": 4,
+          ".cs": 4,
+          ".json": 3,
+          ".dll": 3,
+          ".sln": 1,
+          ".csproj": 1,
+          ".info": 1,
+          ".targets": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-frontend",
+      "path": "/Users/saint/01_DEV/25-frontend",
+      "git": null,
+      "files": {
+        "total": 574,
+        "by_extension": {
+          ".tsx": 72,
+          ".ts": 67,
+          ".json": 60,
+          "[no ext]": 49,
+          ".xml": 48,
+          ".js": 46,
+          ".png": 29,
+          ".md": 28,
+          ".svg": 24,
+          ".html": 21
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-go",
+      "path": "/Users/saint/01_DEV/25-go",
+      "git": null,
+      "files": {
+        "total": 21,
+        "by_extension": {
+          ".go": 4,
+          "[no ext]": 4,
+          ".xml": 4,
+          ".mod": 2,
+          ".iml": 2,
+          ".html": 1,
+          ".sh": 1,
+          ".sum": 1,
+          ".md": 1,
+          ".json": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-learning",
+      "path": "/Users/saint/01_DEV/25-learning",
+      "git": null,
+      "files": {
+        "total": 12853,
+        "by_extension": {
+          ".js": 3968,
+          "[no ext]": 1916,
+          ".png": 1360,
+          ".xml": 1111,
+          ".jpg": 693,
+          ".css": 655,
+          ".svg": 508,
+          ".html": 385,
+          ".scss": 266,
+          ".md": 255
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-python",
+      "path": "/Users/saint/01_DEV/25-python",
+      "git": null,
+      "files": {
+        "total": 164,
+        "by_extension": {
+          ".ipynb": 94,
+          ".xml": 20,
+          ".jpg": 19,
+          "[no ext]": 8,
+          ".md": 4,
+          ".py": 4,
+          ".iml": 4,
+          ".html": 4,
+          ".txt": 3,
+          ".jsonl": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-rust",
+      "path": "/Users/saint/01_DEV/25-rust",
+      "git": null,
+      "files": {
+        "total": 2529,
+        "by_extension": {
+          ".py": 1949,
+          ".yaml": 227,
+          ".md": 117,
+          "[no ext]": 82,
+          ".png": 45,
+          ".txt": 37,
+          ".exe": 28,
+          ".svg": 8,
+          ".xml": 7,
+          ".virtualenv": 6
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-tools",
+      "path": "/Users/saint/01_DEV/25-tools",
+      "git": null,
+      "files": {
+        "total": 356,
+        "by_extension": {
+          ".py": 202,
+          ".yml": 30,
+          ".ts": 25,
+          "[no ext]": 22,
+          ".tsx": 21,
+          ".json": 11,
+          ".txt": 7,
+          ".md": 6,
+          ".svg": 5,
+          ".rst": 4
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "25-wed-design-a2ui",
+      "path": "/Users/saint/01_DEV/25-wed-design-a2ui",
+      "git": null,
+      "files": {
+        "total": 598,
+        "by_extension": {
+          ".ts": 269,
+          ".json": 79,
+          ".md": 58,
+          ".py": 34,
+          ".html": 32,
+          ".png": 24,
+          "[no ext]": 19,
+          ".scss": 18,
+          ".css": 9,
+          ".yml": 8
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-Portfolio-gen",
+      "path": "/Users/saint/01_DEV/26-Portfolio-gen",
+      "git": null,
+      "files": {
+        "total": 226,
+        "by_extension": {
+          ".md": 41,
+          ".docx": 37,
+          ".js": 36,
+          ".ts": 23,
+          ".json": 21,
+          ".png": 13,
+          ".tsx": 11,
+          ".xml": 9,
+          "[no ext]": 7,
+          ".zip": 5
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-SF-Paper_research",
+      "path": "/Users/saint/01_DEV/26-SF-Paper_research",
+      "git": null,
+      "files": {
+        "total": 243,
+        "by_extension": {
+          ".pdf": 51,
+          ".py": 38,
+          ".tsx": 33,
+          ".ts": 31,
+          ".xlsx": 17,
+          ".md": 12,
+          "[no ext]": 8,
+          ".json": 8,
+          ".html": 7,
+          ".example": 5
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-app-sdg",
+      "path": "/Users/saint/01_DEV/26-app-sdg",
+      "git": null,
+      "files": {
+        "total": 68,
+        "by_extension": {
+          ".md": 31,
+          ".json": 19,
+          "[no ext]": 6,
+          ".ts": 4,
+          ".prisma": 3,
+          ".yaml": 2,
+          ".db": 1,
+          ".backup": 1,
+          ".sh": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-app-sungnam-food",
+      "path": "/Users/saint/01_DEV/26-app-sungnam-food",
+      "git": null,
+      "files": {
+        "total": 351,
+        "by_extension": {
+          ".ts": 117,
+          ".tsx": 86,
+          ".png": 59,
+          ".md": 41,
+          ".html": 22,
+          ".json": 6,
+          "[no ext]": 5,
+          ".js": 3,
+          ".yaml": 2,
+          ".mjs": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-plutter",
+      "path": "/Users/saint/01_DEV/26-plutter",
+      "git": null,
+      "files": {
+        "total": 546,
+        "by_extension": {
+          "[no ext]": 166,
+          ".dart": 71,
+          ".png": 44,
+          ".stamp": 36,
+          ".xcconfig": 26,
+          ".plist": 19,
+          ".json": 14,
+          ".log": 13,
+          ".h": 13,
+          ".xml": 12
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-web-RubyRailsPostgre",
+      "path": "/Users/saint/01_DEV/26-web-RubyRailsPostgre",
+      "git": null,
+      "files": {
+        "total": 2458,
+        "by_extension": {
+          "[no ext]": 2377,
+          ".rb": 25,
+          ".yml": 12,
+          ".xml": 9,
+          ".sample": 9,
+          ".html": 5,
+          ".js": 5,
+          ".erb": 4,
+          ".log": 2,
+          ".ru": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-web-passport",
+      "path": "/Users/saint/01_DEV/26-web-passport",
+      "git": null,
+      "files": {
+        "total": 11,
+        "by_extension": {
+          ".md": 7,
+          "[no ext]": 3,
+          ".log": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-web-product-jichim",
+      "path": "/Users/saint/01_DEV/26-web-product-jichim",
+      "git": null,
+      "files": {
+        "total": 7,
+        "by_extension": {
+          ".md": 2,
+          "[no ext]": 1,
+          ".txt": 1,
+          ".db": 1,
+          ".py": 1,
+          ".html": 1
+        }
+      },
+      "types": [
+        "Python Backend",
+        "FastAPI"
+      ],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-web-smartfactory",
+      "path": "/Users/saint/01_DEV/26-web-smartfactory",
+      "git": null,
+      "files": {
+        "total": 99,
+        "by_extension": {
+          ".tsx": 24,
+          ".ts": 20,
+          ".png": 14,
+          ".html": 14,
+          ".md": 8,
+          "[no ext]": 5,
+          ".svg": 5,
+          ".json": 4,
+          ".mjs": 2,
+          ".prisma": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "26-web-tax-cop",
+      "path": "/Users/saint/01_DEV/26-web-tax-cop",
+      "git": null,
+      "files": {
+        "total": 16,
+        "by_extension": {
+          ".pdf": 6,
+          ".doc": 4,
+          ".zip": 3,
+          ".exe": 2,
+          "[no ext]": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "27_opencode",
+      "path": "/Users/saint/01_DEV/27_opencode",
+      "git": null,
+      "files": {
+        "total": 0,
+        "by_extension": {}
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "ETC",
+      "path": "/Users/saint/01_DEV/ETC",
+      "git": null,
+      "files": {
+        "total": 675,
+        "by_extension": {
+          ".php": 610,
+          "[no ext]": 17,
+          ".json": 15,
+          ".css": 10,
+          ".js": 9,
+          ".md": 4,
+          ".svg": 2,
+          ".csv": 2,
+          ".lock": 1,
+          ".xml": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "SaaS_erp",
+      "path": "/Users/saint/01_DEV/SaaS_erp",
+      "git": null,
+      "files": {
+        "total": 146,
+        "by_extension": {
+          "[no ext]": 41,
+          ".md": 37,
+          ".json": 13,
+          ".yml": 13,
+          ".yaml": 13,
+          ".docx": 9,
+          ".js": 6,
+          ".sh": 5,
+          ".example": 2,
+          ".html": 1
+        }
+      },
+      "types": [],
+      "has_devlog": true,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "dev-search",
+      "path": "/Users/saint/01_DEV/dev-search",
+      "git": null,
+      "files": {
+        "total": 109,
+        "by_extension": {
+          ".tsx": 38,
+          ".ts": 30,
+          ".svg": 10,
+          ".json": 8,
+          ".md": 6,
+          ".mjs": 4,
+          ".docx": 4,
+          "[no ext]": 2,
+          ".sql": 2,
+          ".ico": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "development-misc",
+      "path": "/Users/saint/01_DEV/development-misc",
+      "git": null,
+      "files": {
+        "total": 2,
+        "by_extension": {
+          "[no ext]": 2
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "docs",
+      "path": "/Users/saint/01_DEV/docs",
+      "git": null,
+      "files": {
+        "total": 41,
+        "by_extension": {
+          ".md": 22,
+          ".png": 6,
+          ".xml": 4,
+          "[no ext]": 2,
+          ".json": 2,
+          ".list": 2,
+          ".tree": 1,
+          ".cfg": 1,
+          ".iml": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "saas-child-mvp",
+      "path": "/Users/saint/01_DEV/saas-child-mvp",
+      "git": null,
+      "files": {
+        "total": 1,
+        "by_extension": {
+          ".log": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "saas-fire-abada-kr",
+      "path": "/Users/saint/01_DEV/saas-fire-abada-kr",
+      "git": null,
+      "files": {
+        "total": 11087,
+        "by_extension": {
+          ".sql": 10120,
+          ".tsx": 282,
+          ".ts": 209,
+          ".md": 141,
+          ".png": 57,
+          ".js": 56,
+          ".docx": 38,
+          ".json": 32,
+          ".pdf": 19,
+          "[no ext]": 18
+        }
+      },
+      "types": [],
+      "has_devlog": true,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "saas-trable-blk",
+      "path": "/Users/saint/01_DEV/saas-trable-blk",
+      "git": null,
+      "files": {
+        "total": 374,
+        "by_extension": {
+          ".go": 174,
+          ".tsx": 59,
+          ".md": 30,
+          ".ts": 24,
+          ".sql": 20,
+          ".yaml": 16,
+          "[no ext]": 9,
+          ".yml": 9,
+          ".tf": 8,
+          ".example": 5
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "web-dev-tracker",
+      "path": "/Users/saint/01_DEV/web-dev-tracker",
+      "git": null,
+      "files": {
+        "total": 58,
+        "by_extension": {
+          ".tsx": 33,
+          ".ts": 13,
+          ".json": 3,
+          ".mjs": 2,
+          ".tsbuildinfo": 1,
+          "[no ext]": 1,
+          ".db": 1,
+          ".sql": 1,
+          ".db-shm": 1,
+          ".db-wal": 1
+        }
+      },
+      "types": [
+        "Web Frontend"
+      ],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "web-music-abada",
+      "path": "/Users/saint/01_DEV/web-music-abada",
+      "git": null,
+      "files": {
+        "total": 1,
+        "by_extension": {
+          ".md": 1
+        }
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    },
+    {
+      "name": "web-smartfactory",
+      "path": "/Users/saint/01_DEV/web-smartfactory",
+      "git": {
+        "has_git": true,
+        "remote_url": "https://github.com/saintgo7/web-smartfactory.git",
+        "branch": null,
+        "total_commits": 0,
+        "recent_commits": 0,
+        "last_commit_date": null,
+        "last_commit_message": null,
+        "authors": [],
+        "days_since_last_commit": null
+      },
+      "files": {
+        "total": 0,
+        "by_extension": {}
+      },
+      "types": [],
+      "has_devlog": false,
+      "has_devlog_json": false,
+      "devlog_count": 0,
+      "score": 0
+    }
+  ]
+}

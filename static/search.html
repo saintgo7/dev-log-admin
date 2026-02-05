@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Log Admin - Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>🔍 통합 검색</h1>
+            <nav class="nav">
+                <a href="/" class="nav-link">Dashboard</a>
+                <a href="/search.html" class="nav-link active">Search</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-box">
+            <input type="text" id="searchInput" placeholder="검색어 입력..." class="search-input">
+            <button onclick="performSearch()" class="search-btn">Search</button>
+        </section>
+
+        <section id="searchResults" class="search-results">
+            <p class="search-hint">검색어를 입력하세요</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Dev Log Admin v1.0 | SQLite Backend</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>

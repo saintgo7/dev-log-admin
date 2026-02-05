@@ -1,0 +1,253 @@
+{
+  "projects": [
+    {
+      "slug": "saas-ws",
+      "name": "PamOut Workstation Manager",
+      "description": "Multi-workstation management SaaS platform",
+      "repository_url": "https://github.com/saintgo7/saas-ws-abada-co-kr",
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "json_path": "~/01_DEV/saas-ws-abada-co-kr/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-ws-abada-co-kr/docs/html/index.html"
+    },
+    {
+      "slug": "fire-abada-kr-v2",
+      "name": "Fire Abada KR v2",
+      "description": "Fire management system - version 2",
+      "repository_url": "https://github.com/saintgo7/fire-abada-kr-v2",
+      "tech_stack": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ],
+      "json_path": "/Users/saint/01_DEV/saas-fire-abada-kr/fire-abada-kr-v2/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-fire-abada-kr/fire-abada-kr-v2/docs/html/index.html"
+    },
+    {
+      "slug": "saas-devlog-system",
+      "name": "Dev Log System",
+      "description": "Development log automation and visualization system",
+      "repository_url": "https://github.com/saintgo7/saas-devlog-system",
+      "tech_stack": [
+        "Python",
+        "Shell",
+        "JavaScript",
+        "FastAPI",
+        "SQLite"
+      ],
+      "json_path": "/Users/saint/saintgo7/saas-devlog-system/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/saintgo7/saas-devlog-system/docs/html/index.html"
+    },
+    {
+      "slug": "saas-ws-abada-co-kr",
+      "name": "Saas Ws Abada Co Kr",
+      "description": "Saas Ws Abada Co Kr project",
+      "repository_url": "https://github.com/saintgo7/web-work-manager.git",
+      "tech_stack": [
+        "Docker",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "json_path": "/Users/saint/01_DEV/saas-ws-abada-co-kr/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-ws-abada-co-kr/docs/html/index.html"
+    },
+    {
+      "slug": "test-devlog-project",
+      "name": "Test Devlog Project",
+      "description": "Test Devlog Project project",
+      "repository_url": "",
+      "tech_stack": [],
+      "json_path": "/Users/saint/01_DEV/test-devlog-project/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/test-devlog-project/docs/html/index.html"
+    },
+    {
+      "slug": "01-template",
+      "name": "01 Template",
+      "description": "01 Template project",
+      "repository_url": "https://github.com/saintgo7/saas-vibe.git",
+      "tech_stack": [],
+      "json_path": "/Users/saint/01_DEV/01-template/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/01-template/docs/html/index.html"
+    },
+    {
+      "slug": "26-full-dev-log",
+      "name": "26 Full Dev Log",
+      "description": "26 Full Dev Log project",
+      "repository_url": "https://github.com/saintgo7/full-dev-log.git",
+      "tech_stack": [
+        "Docker",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "json_path": "/Users/saint/01_DEV/26-full-dev-log/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/26-full-dev-log/docs/html/index.html"
+    },
+    {
+      "slug": "26-web-skyair-ts",
+      "name": "26 Web Skyair Ts",
+      "description": "26 Web Skyair Ts project",
+      "repository_url": "https://github.com/saintgo7/skyair-travel.git",
+      "tech_stack": [
+        "Next.js",
+        "Node.js",
+        "Prisma",
+        "React"
+      ],
+      "json_path": "/Users/saint/01_DEV/26-web-skyair-TS/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/26-web-skyair-TS/docs/html/index.html"
+    },
+    {
+      "slug": "saas-erp-clone-260116",
+      "name": "Saas Erp Clone 260116",
+      "description": "Saas Erp Clone 260116 project",
+      "repository_url": "https://github.com/saintgo7/saas-kerp.git",
+      "tech_stack": [
+        "Go",
+        "Node.js"
+      ],
+      "json_path": "/Users/saint/01_DEV/SaaS_erp_clone-260116/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/SaaS_erp_clone-260116/docs/html/index.html"
+    },
+    {
+      "slug": "app-passport-reserve",
+      "name": "App Passport Reserve",
+      "description": "App Passport Reserve project",
+      "repository_url": "https://github.com/saintgo7/app-passport-reserve.git",
+      "tech_stack": [
+        "Alembic",
+        "Docker",
+        "FastAPI",
+        "PostgreSQL",
+        "Python",
+        "Redis",
+        "SQLAlchemy"
+      ],
+      "json_path": "/Users/saint/01_DEV/app-passport-reserve/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/app-passport-reserve/docs/html/index.html"
+    },
+    {
+      "slug": "saas-crew",
+      "name": "Saas Crew",
+      "description": "Saas Crew project",
+      "repository_url": "https://github.com/saintgo7/saas-crew",
+      "tech_stack": [
+        "Docker",
+        "Node.js",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "json_path": "/Users/saint/01_DEV/saas-crew/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-crew/docs/html/index.html"
+    },
+    {
+      "slug": "saas-erpmes-2601",
+      "name": "Saas Erpmes 2601",
+      "description": "Saas Erpmes 2601 project",
+      "repository_url": "https://github.com/saintgo7/saas-erpmes-2601.git",
+      "tech_stack": [
+        "Docker",
+        "Go",
+        "Node.js",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "json_path": "/Users/saint/01_DEV/saas-erpmes-2601/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-erpmes-2601/docs/html/index.html"
+    },
+    {
+      "slug": "saas-iso",
+      "name": "Saas Iso",
+      "description": "Saas Iso project",
+      "repository_url": "https://github.com/saintgo7/saas-iso.git",
+      "tech_stack": [
+        "Go"
+      ],
+      "json_path": "/Users/saint/01_DEV/saas-iso/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-iso/docs/html/index.html"
+    },
+    {
+      "slug": "saas-orak",
+      "name": "Saas Orak",
+      "description": "Saas Orak project",
+      "repository_url": "https://github.com/saintgo7/saas-orak.git",
+      "tech_stack": [
+        "Node.js",
+        "React"
+      ],
+      "json_path": "/Users/saint/01_DEV/saas-orak/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/saas-orak/docs/html/index.html"
+    },
+    {
+      "slug": "26-smartfactotyax-support",
+      "name": "26 Smartfactotyax Support",
+      "description": "26 Smartfactotyax Support project",
+      "repository_url": "https://github.com/saintgo7/web-SF-AX-support.git",
+      "tech_stack": [],
+      "json_path": "/Users/saint/01_DEV/26-SmartFactotyAX_Support/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/26-SmartFactotyAX_Support/docs/html/index.html"
+    },
+    {
+      "slug": "smartfactoryax-v0.1.1",
+      "name": "Smartfactoryax V0.1.1",
+      "description": "Smartfactoryax V0.1.1 project",
+      "repository_url": "https://github.com/saintgo7/web-SF-AX-support.git",
+      "tech_stack": [],
+      "json_path": "/Users/saint/01_DEV/SmartFactoryAX_v0.1.1/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/SmartFactoryAX_v0.1.1/docs/html/index.html"
+    },
+    {
+      "slug": "smartfactoryax-v0.1.2",
+      "name": "Smartfactoryax V0.1.2",
+      "description": "Smartfactoryax V0.1.2 project",
+      "repository_url": "https://github.com/saintgo7/web-SF-AX-support.git",
+      "tech_stack": [],
+      "json_path": "/Users/saint/01_DEV/SmartFactoryAX_v0.1.2/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/SmartFactoryAX_v0.1.2/docs/html/index.html"
+    },
+    {
+      "slug": "weberpmes-v2",
+      "name": "Weberpmes V2",
+      "description": "Weberpmes V2 project",
+      "repository_url": "https://github.com/e2both/Web-SmartFactory-ErpMes.git",
+      "tech_stack": [
+        "Docker",
+        "Node.js",
+        "PHP",
+        "Vue.js"
+      ],
+      "json_path": "/Users/saint/01_DEV/WebErpMes-v2/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/WebErpMes-v2/docs/html/index.html"
+    },
+    {
+      "slug": "app-hospital-yoyang",
+      "name": "App Hospital Yoyang",
+      "description": "App Hospital Yoyang project",
+      "repository_url": "https://github.com/saintgo7/app-hospital-yoyang.git",
+      "tech_stack": [
+        "Docker",
+        "Next.js",
+        "Node.js",
+        "React"
+      ],
+      "json_path": "/Users/saint/01_DEV/app-hospital-yoyang/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/app-hospital-yoyang/docs/html/index.html"
+    },
+    {
+      "slug": "web-music-heartlib",
+      "name": "Web Music Heartlib",
+      "description": "Web Music Heartlib project",
+      "repository_url": "https://github.com/saintgo7/web-music-heartlib.git",
+      "tech_stack": [
+        "Node.js",
+        "Python"
+      ],
+      "json_path": "/Users/saint/01_DEV/web-music-heartlib/docs/html/data/dev-logs.json",
+      "html_url": "file:///Users/saint/01_DEV/web-music-heartlib/docs/html/index.html"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Dev Log Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>📊 개발 로그 통합 대시보드</h1>
+            <nav class="nav">
+                <a href="/" class="nav-link">Dashboard</a>
+                <a href="/search.html" class="nav-link">Search</a>
+                <button onclick="window.history.back()" class="reload-btn">← Back</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <div id="projectHeader" class="project-detail-header">
+                <h2 id="projectName">Loading...</h2>
+                <p id="projectDesc"></p>
+                <div id="projectMeta" class="project-meta"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3>Commits</h3>
+                <div>
+                    <select id="typeFilter" onchange="loadCommits()">
+                        <option value="">All Types</option>
+                        <option value="feat">feat</option>
+                        <option value="fix">fix</option>
+                        <option value="chore">chore</option>
+                        <option value="docs">docs</option>
+                        <option value="refactor">refactor</option>
+                        <option value="test">test</option>
+                        <option value="ci">ci</option>
+                        <option value="perf">perf</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search..." onkeyup="handleSearch(event)">
+                </div>
+            </div>
+            <div id="commitsList"></div>
+            <div id="pagination" style="text-align: center; margin-top: 2rem;"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Dev Log Admin v1.0 | SQLite Backend</p>
+    </footer>
+
+    <script src="project.js?v=1770286323"></script>
+</body>
+</html>
