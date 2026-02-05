@@ -70,6 +70,7 @@ class User(Base, UUIDPrimaryKeyMixin, TimestampMixin):
     team_memberships: Mapped[List["TeamMember"]] = relationship(
         "TeamMember",
         back_populates="user",
+        foreign_keys="[TeamMember.user_id]",
         cascade="all, delete-orphan"
     )
 
