@@ -36,8 +36,21 @@ class Settings(BaseSettings):
     # OAuth Providers
     GITHUB_CLIENT_ID: Optional[str] = None
     GITHUB_CLIENT_SECRET: Optional[str] = None
+    GITHUB_CALLBACK_URL: str = "http://localhost:8100/api/v2/github/callback"
     GOOGLE_CLIENT_ID: Optional[str] = None
     GOOGLE_CLIENT_SECRET: Optional[str] = None
+
+    # GitHub API
+    GITHUB_API_BASE_URL: str = "https://api.github.com"
+    GITHUB_OAUTH_URL: str = "https://github.com/login/oauth"
+    GITHUB_TOKEN_ENCRYPTION_KEY: Optional[str] = None  # Fernet key for encrypting tokens
+
+    # GitHub Webhook
+    GITHUB_WEBHOOK_SECRET: Optional[str] = None
+
+    # Sync Settings
+    SYNC_BATCH_SIZE: int = 100
+    SYNC_MAX_COMMITS_PER_REPO: int = 1000
 
     # CORS
     CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:8100"]

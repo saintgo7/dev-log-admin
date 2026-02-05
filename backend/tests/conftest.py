@@ -150,3 +150,33 @@ def admin_auth_headers(admin_user: User) -> dict:
     """Create authorization headers for admin user"""
     token = create_access_token(subject=admin_user.id)
     return {"Authorization": f"Bearer {token}"}
+
+
+@pytest_asyncio.fixture
+async def test_project(db_session: AsyncSession, test_team: Team) -> dict:
+    """Create a test project"""
+    from app.models.project import Project
+
+    project = Project(
+        id=str(uuid4()),
+        slug="test-project",
+        name="Test Project",
+        description="A test project",
+        team_id=test_team.id,
+    )
+    db_session.add(project)
+    await db_session.commit()
+    await db_session.refresh(project)
+
+    return {
+        "id": project.id,
+        "slug": project.slug,
+        "name": project.name,
+        "team_id": project.team_id,
+    }
+
+
+@pytest_asyncio.fixture
+async def db(db_session: AsyncSession) -> AsyncSession:
+    """Alias for db_session for compatibility"""
+    return db_session

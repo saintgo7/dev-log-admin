@@ -12,8 +12,14 @@ alembic>=1.13.0
 # Authentication
 python-jose[cryptography]>=3.3.0
 passlib[bcrypt]>=1.7.4
+<<<<<<< HEAD
 
 # OAuth (optional, for social login)
+=======
+cryptography>=42.0.0
+
+# HTTP Client (for OAuth and API calls)
+>>>>>>> feature/phase3-github-oauth
 httpx>=0.26.0
 
 # Utilities

@@ -30,6 +30,24 @@ from app.schemas.commit import (
     CommitCreate,
     CommitResponse,
 )
+from app.schemas.github import (
+    GitHubOAuthRequest,
+    GitHubOAuthResponse,
+    GitHubOAuthCallback,
+    GitHubConnectionCreate,
+    GitHubConnectionResponse,
+    GitHubConnectionStatus,
+    GitHubRepositoryCreate,
+    GitHubRepositoryUpdate,
+    GitHubRepositoryResponse,
+    SyncRequest,
+    SyncHistoryResponse,
+    SyncStatusResponse,
+    WebhookSetupRequest,
+    WebhookSetupResponse,
+    WebhookEventResponse,
+    GitHubRateLimitInfo,
+)
 
 __all__ = [
     "UserCreate", "UserUpdate", "UserResponse", "UserInDB",
@@ -37,4 +55,11 @@ __all__ = [
     "Token", "TokenPayload", "LoginRequest", "RegisterRequest", "OAuthCallback",
     "ProjectCreate", "ProjectUpdate", "ProjectResponse",
     "CommitCreate", "CommitResponse",
+    # GitHub
+    "GitHubOAuthRequest", "GitHubOAuthResponse", "GitHubOAuthCallback",
+    "GitHubConnectionCreate", "GitHubConnectionResponse", "GitHubConnectionStatus",
+    "GitHubRepositoryCreate", "GitHubRepositoryUpdate", "GitHubRepositoryResponse",
+    "SyncRequest", "SyncHistoryResponse", "SyncStatusResponse",
+    "WebhookSetupRequest", "WebhookSetupResponse", "WebhookEventResponse",
+    "GitHubRateLimitInfo",
 ]
