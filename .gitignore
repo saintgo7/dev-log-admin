@@ -55,8 +55,20 @@ logs/
 coverage/
 .nyc_output/
 .pytest_cache/
+htmlcov/
 
 # Build artifacts
 *.egg-info/
 dist/
 build/
+
+# Backend specific
+backend/.venv/
+backend/.env
+*.sqlite3
+
+# Alembic
+backend/migrations/versions/__pycache__/
+
+# mypy
+.mypy_cache/
