@@ -6,11 +6,10 @@ from datetime import datetime
 from enum import Enum
 
 from sqlalchemy import String, Text, Integer, DateTime, ForeignKey, Boolean, Index
-from sqlalchemy.dialects.postgresql import UUID, JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.session import Base
-from app.models.base import TimestampMixin, UUIDPrimaryKeyMixin
+from app.models.base import GUID, JSONBType, TimestampMixin, UUIDPrimaryKeyMixin
 
 if TYPE_CHECKING:
     from app.models.user import User
@@ -53,7 +52,7 @@ class GitHubConnection(Base, UUIDPrimaryKeyMixin, TimestampMixin):
 
     # User relationship
     user_id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("users.id", ondelete="CASCADE"),
         nullable=False,
         index=True
@@ -109,7 +108,7 @@ class GitHubRepository(Base, UUIDPrimaryKeyMixin, TimestampMixin):
 
     # Project relationship
     project_id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("projects.id", ondelete="CASCADE"),
         nullable=False,
         unique=True,
@@ -177,7 +176,7 @@ class SyncHistory(Base, UUIDPrimaryKeyMixin, TimestampMixin):
 
     # Repository relationship
     repository_id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("github_repositories.id", ondelete="CASCADE"),
         nullable=False,
         index=True
@@ -228,7 +227,7 @@ class WebhookEvent(Base, UUIDPrimaryKeyMixin, TimestampMixin):
 
     # Repository (optional - might be org-level webhook)
     repository_id: Mapped[Optional[str]] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("github_repositories.id", ondelete="SET NULL"),
         nullable=True,
         index=True
@@ -240,7 +239,7 @@ class WebhookEvent(Base, UUIDPrimaryKeyMixin, TimestampMixin):
     delivery_id: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
 
     # Payload
-    payload: Mapped[Optional[dict]] = mapped_column(JSONB, nullable=True)
+    payload: Mapped[Optional[dict]] = mapped_column(JSONBType, nullable=True)
 
     # Processing
     processed: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)

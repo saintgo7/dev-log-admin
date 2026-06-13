@@ -3,8 +3,9 @@
 SQLite Database Schema for Dev Log Admin
 """
 import sqlite3
+from pathlib import Path as _Path
 
-DB_PATH = "devlog.db"
+DB_PATH = str(_Path(__file__).parent / "devlog.db")
 
 def init_db():
     """Initialize SQLite database with schema"""

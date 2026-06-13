@@ -16,7 +16,7 @@ class Settings(BaseSettings):
 
     # Server
     HOST: str = "0.0.0.0"
-    PORT: int = 8100
+    PORT: int = 8200
 
     # Database
     DATABASE_URL: str = "postgresql://localhost/devlog"
@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     # OAuth Providers
     GITHUB_CLIENT_ID: Optional[str] = None
     GITHUB_CLIENT_SECRET: Optional[str] = None
-    GITHUB_CALLBACK_URL: str = "http://localhost:8100/api/v2/github/callback"
+    GITHUB_CALLBACK_URL: str = "http://localhost:8200/api/v2/github/callback"
     GOOGLE_CLIENT_ID: Optional[str] = None
     GOOGLE_CLIENT_SECRET: Optional[str] = None
 
@@ -53,7 +53,7 @@ class Settings(BaseSettings):
     SYNC_MAX_COMMITS_PER_REPO: int = 1000
 
     # CORS
-    CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:8100"]
+    CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:8100", "http://localhost:8200"]
 
     # Rate Limiting
     RATE_LIMIT_REQUESTS: int = 100

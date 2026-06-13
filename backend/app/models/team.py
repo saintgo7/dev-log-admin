@@ -5,11 +5,10 @@ from typing import Optional, List, TYPE_CHECKING
 from enum import Enum
 
 from sqlalchemy import String, Text, ForeignKey, UniqueConstraint
-from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.session import Base
-from app.models.base import TimestampMixin, UUIDPrimaryKeyMixin
+from app.models.base import GUID, TimestampMixin, UUIDPrimaryKeyMixin
 
 if TYPE_CHECKING:
     from app.models.user import User
@@ -80,12 +79,12 @@ class TeamMember(Base, TimestampMixin):
 
     # Composite primary key
     team_id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("teams.id", ondelete="CASCADE"),
         primary_key=True
     )
     user_id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("users.id", ondelete="CASCADE"),
         primary_key=True
     )
@@ -100,7 +99,7 @@ class TeamMember(Base, TimestampMixin):
     # Invitation status
     is_active: Mapped[bool] = mapped_column(default=True, nullable=False)
     invited_by: Mapped[Optional[str]] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("users.id", ondelete="SET NULL"),
         nullable=True
     )

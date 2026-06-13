@@ -24,7 +24,7 @@ from uuid import uuid4
 import asyncpg
 
 # Default paths
-DEFAULT_SQLITE_PATH = Path(__file__).parent.parent.parent / "devlog.db"
+DEFAULT_SQLITE_PATH = Path(__file__).parent.parent.parent / "legacy" / "devlog.db"
 
 
 class MigrationError(Exception):

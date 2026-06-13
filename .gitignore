@@ -9,7 +9,7 @@ env/
 ENV/
 *.pyc
 
-# Node.js (Phase 1부터)
+# Node.js
 node_modules/
 .next/
 out/
@@ -28,11 +28,13 @@ build/
 *.db
 devlog.db
 
-# Logs
+# Logs & PIDs
 *.log
 logs/
-/tmp/
+.logs/
+.pids/
 .server.pid
+/tmp/
 
 # IDE
 .vscode/
@@ -49,7 +51,6 @@ logs/
 # Temporary files
 *.tmp
 *.bak
-*.swp
 
 # Testing
 coverage/
@@ -72,3 +73,6 @@ backend/migrations/versions/__pycache__/
 
 # mypy
 .mypy_cache/
+
+# Legacy backups
+scripts/*.bak

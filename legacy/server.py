@@ -23,7 +23,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DB_PATH = "devlog.db"
+DB_PATH = str(Path(__file__).parent / "devlog.db")
 
 @contextmanager
 def get_db():
@@ -392,7 +392,7 @@ def health_check():
             )
 
 # Mount static files (must be last)
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
+app.mount("/", StaticFiles(directory=str(Path(__file__).parent / "static"), html=True), name="static")
 
 if __name__ == "__main__":
     import uvicorn

@@ -5,11 +5,10 @@ from typing import Optional, TYPE_CHECKING
 from datetime import datetime
 
 from sqlalchemy import String, Text, Integer, DateTime, ForeignKey, Index
-from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.session import Base
-from app.models.base import TimestampMixin, UUIDPrimaryKeyMixin
+from app.models.base import GUID, TimestampMixin, UUIDPrimaryKeyMixin
 
 if TYPE_CHECKING:
     from app.models.project import Project
@@ -22,7 +21,7 @@ class Commit(Base, UUIDPrimaryKeyMixin, TimestampMixin):
 
     # Project relationship
     project_id: Mapped[str] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("projects.id", ondelete="CASCADE"),
         nullable=False,
         index=True

@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.config import settings
+
 
 class TestGitHubOAuthEndpoints:
     """Test GitHub OAuth endpoints"""
@@ -184,8 +186,10 @@ class TestWebhookEndpoints:
 
         payload = b'{"zen": "test", "hook_id": 123}'
 
-        with patch("app.core.config.settings") as mock_settings:
-            mock_settings.GITHUB_WEBHOOK_SECRET = "test_secret"
+        # 서비스가 모듈 임포트 시점에 settings 인스턴스를 직접 참조하므로
+        # 모듈 이름(app.core.config.settings)을 교체하면 서비스에 닿지 않는다.
+        # 실제 인스턴스 속성을 patch.object로 덮어써야 검증 경로에 반영된다.
+        with patch.object(settings, "GITHUB_WEBHOOK_SECRET", "test_secret"):
 
             signature = "sha256=" + hmac.new(
                 b"test_secret",

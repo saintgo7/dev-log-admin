@@ -6,11 +6,10 @@ from datetime import datetime
 from enum import Enum
 
 from sqlalchemy import String, Text, Integer, DateTime, ForeignKey
-from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.session import Base
-from app.models.base import TimestampMixin, UUIDPrimaryKeyMixin
+from app.models.base import GUID, TimestampMixin, UUIDPrimaryKeyMixin
 
 if TYPE_CHECKING:
     from app.models.team import Team
@@ -53,7 +52,7 @@ class Project(Base, UUIDPrimaryKeyMixin, TimestampMixin):
 
     # Team relationship
     team_id: Mapped[Optional[str]] = mapped_column(
-        UUID(as_uuid=False),
+        GUID,
         ForeignKey("teams.id", ondelete="CASCADE"),
         nullable=True,
         index=True

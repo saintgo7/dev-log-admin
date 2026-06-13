@@ -7,11 +7,12 @@ import sqlite3
 from pathlib import Path
 from datetime import datetime
 
-DB_PATH = "devlog.db"
+DB_PATH = str(Path(__file__).parent / "devlog.db")
 
 def load_config():
     """Load config.json"""
-    with open("config.json", "r", encoding="utf-8") as f:
+    config_path = Path(__file__).parent / "config.json"
+    with open(config_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def sync_project(conn, project_config):
