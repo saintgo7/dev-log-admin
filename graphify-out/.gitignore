@@ -1,0 +1,6 @@
+graph.html
+cache/
+*.bak
+2026-*/
+manifest.json
+.graphify_*
