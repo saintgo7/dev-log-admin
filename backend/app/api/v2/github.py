@@ -6,9 +6,13 @@ from typing import Optional, List
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select
 
-from app.core.deps import get_db, get_current_user
+from app.core.deps import (
+    get_db,
+    get_current_user,
+    require_repository_access,
+    require_repository_write,
+)
 from app.models.user import User
 from app.models.github import GitHubRepository, GitHubConnection
 from app.schemas.github import (
@@ -296,20 +300,9 @@ async def link_repository(
 async def get_repository(
     repository_id: str,
     db: AsyncSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    github_repo: GitHubRepository = Depends(require_repository_access),
 ):
     """Get a linked GitHub repository"""
-    result = await db.execute(
-        select(GitHubRepository).where(GitHubRepository.id == repository_id)
-    )
-    github_repo = result.scalar_one_or_none()
-
-    if not github_repo:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Repository not found",
-        )
-
     return GitHubRepositoryResponse(
         id=github_repo.id,
         project_id=github_repo.project_id,
@@ -349,20 +342,9 @@ async def update_repository(
     repository_id: str,
     data: GitHubRepositoryUpdate,
     db: AsyncSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    github_repo: GitHubRepository = Depends(require_repository_write),
 ):
     """Update repository sync settings"""
-    result = await db.execute(
-        select(GitHubRepository).where(GitHubRepository.id == repository_id)
-    )
-    github_repo = result.scalar_one_or_none()
-
-    if not github_repo:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Repository not found",
-        )
-
     # Update fields
     if data.sync_enabled is not None:
         github_repo.sync_enabled = data.sync_enabled
@@ -414,20 +396,9 @@ async def update_repository(
 async def unlink_repository(
     repository_id: str,
     db: AsyncSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    github_repo: GitHubRepository = Depends(require_repository_write),
 ):
     """Unlink a GitHub repository from a project"""
-    result = await db.execute(
-        select(GitHubRepository).where(GitHubRepository.id == repository_id)
-    )
-    github_repo = result.scalar_one_or_none()
-
-    if not github_repo:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Repository not found",
-        )
-
     await db.delete(github_repo)
     await db.commit()
 
@@ -442,6 +413,7 @@ async def sync_repository(
     data: SyncRequest = None,
     db: AsyncSession = Depends(get_db),
     current_user: User = Depends(get_current_user),
+    github_repo: GitHubRepository = Depends(require_repository_write),
 ):
     """
     Trigger a manual sync for a repository.
@@ -488,7 +460,7 @@ async def sync_repository(
 async def get_sync_status(
     repository_id: str,
     db: AsyncSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    github_repo: GitHubRepository = Depends(require_repository_access),
 ):
     """Get sync status for a repository"""
     sync_service = SyncService(db)
@@ -524,7 +496,7 @@ async def get_sync_history(
     repository_id: str,
     limit: int = Query(10, ge=1, le=50),
     db: AsyncSession = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    github_repo: GitHubRepository = Depends(require_repository_access),
 ):
     """Get sync history for a repository"""
     sync_service = SyncService(db)

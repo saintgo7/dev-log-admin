@@ -111,8 +111,54 @@ async def list_webhook_events(
     List received webhook events.
 
     Can be filtered by repository, event type, or processing status.
-    Requires authentication.
+    Requires authentication. Non-admin users must scope the listing to a
+    repository they have access to.
     """
+    from sqlalchemy import select
+    from app.models.github import GitHubRepository
+    from app.models.project import Project
+    from app.models.team import TeamMember
+
+    # Non-admins may only list events for a repository they can access.
+    if not current_user.is_admin:
+        if not repository_id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="A repository_id you have access to is required",
+            )
+
+        repo_result = await db.execute(
+            select(GitHubRepository).where(GitHubRepository.id == repository_id)
+        )
+        github_repo = repo_result.scalar_one_or_none()
+        if not github_repo:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Repository not found",
+            )
+
+        project_result = await db.execute(
+            select(Project).where(Project.id == github_repo.project_id)
+        )
+        project = project_result.scalar_one_or_none()
+
+        authorized = bool(project and project.is_public)
+        if not authorized and project and project.team_id:
+            member_result = await db.execute(
+                select(TeamMember).where(
+                    TeamMember.team_id == project.team_id,
+                    TeamMember.user_id == current_user.id,
+                    TeamMember.is_active == True,
+                )
+            )
+            authorized = member_result.scalar_one_or_none() is not None
+
+        if not authorized:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Not authorized to access this repository",
+            )
+
     webhook_service = WebhookService(db)
 
     events = await webhook_service.get_webhook_events(
@@ -152,7 +198,9 @@ async def get_webhook_event(
     Optionally include the full payload.
     """
     from sqlalchemy import select
-    from app.models.github import WebhookEvent
+    from app.models.github import WebhookEvent, GitHubRepository
+    from app.models.project import Project
+    from app.models.team import TeamMember
 
     result = await db.execute(
         select(WebhookEvent).where(WebhookEvent.id == event_id)
@@ -163,6 +211,38 @@ async def get_webhook_event(
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Webhook event not found",
+        )
+
+    # Authorize: scope the event (and its raw payload) to users who can access
+    # the underlying repository's project. Events not tied to a repository are
+    # restricted to admins since they cannot be scoped to a team.
+    authorized = current_user.is_admin
+    if not authorized and event.repository_id:
+        repo_result = await db.execute(
+            select(GitHubRepository).where(GitHubRepository.id == event.repository_id)
+        )
+        github_repo = repo_result.scalar_one_or_none()
+        if github_repo:
+            project_result = await db.execute(
+                select(Project).where(Project.id == github_repo.project_id)
+            )
+            project = project_result.scalar_one_or_none()
+            if project and project.is_public:
+                authorized = True
+            elif project and project.team_id:
+                member_result = await db.execute(
+                    select(TeamMember).where(
+                        TeamMember.team_id == project.team_id,
+                        TeamMember.user_id == current_user.id,
+                        TeamMember.is_active == True,
+                    )
+                )
+                authorized = member_result.scalar_one_or_none() is not None
+
+    if not authorized:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Not authorized to access this webhook event",
         )
 
     response = WebhookEventResponse(
