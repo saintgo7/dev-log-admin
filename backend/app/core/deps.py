@@ -12,6 +12,7 @@ from app.db.session import get_db
 from app.models.user import User
 from app.models.team import Team, TeamMember, TeamMemberRole
 from app.models.project import Project
+from app.models.github import GitHubRepository
 from app.middleware.auth import get_current_user, get_current_user_optional
 
 
@@ -129,18 +130,16 @@ async def get_project_or_404(
     return project
 
 
-async def require_project_access(
-    project_id: Annotated[str, Path(description="Project ID")],
-    current_user: Annotated[Optional[User], Depends(get_current_user_optional)],
-    db: DB
+async def _check_project_access(
+    project: Project,
+    current_user: Optional[User],
+    db: AsyncSession
 ) -> Project:
     """
-    Require access to project.
+    Core read-access check for an already-loaded project.
     Public projects can be accessed by anyone.
     Private/team projects require team membership.
     """
-    project = await get_project_or_404(project_id, db)
-
     # Public projects are accessible to everyone
     if project.is_public:
         return project
@@ -171,17 +170,15 @@ async def require_project_access(
     return project
 
 
-async def require_project_write(
-    project_id: Annotated[str, Path(description="Project ID")],
-    current_user: Annotated[User, Depends(get_current_user)],
-    db: DB
+async def _check_project_write(
+    project: Project,
+    current_user: User,
+    db: AsyncSession
 ) -> Project:
     """
-    Require write access to project.
+    Core write-access check for an already-loaded project.
     Requires team membership with write permission.
     """
-    project = await get_project_or_404(project_id, db)
-
     if not project.team_id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -205,3 +202,78 @@ async def require_project_write(
         )
 
     return project
+
+
+async def require_project_access(
+    project_id: Annotated[str, Path(description="Project ID")],
+    current_user: Annotated[Optional[User], Depends(get_current_user_optional)],
+    db: DB
+) -> Project:
+    """
+    Require access to project.
+    Public projects can be accessed by anyone.
+    Private/team projects require team membership.
+    """
+    project = await get_project_or_404(project_id, db)
+    return await _check_project_access(project, current_user, db)
+
+
+async def require_project_write(
+    project_id: Annotated[str, Path(description="Project ID")],
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: DB
+) -> Project:
+    """
+    Require write access to project.
+    Requires team membership with write permission.
+    """
+    project = await get_project_or_404(project_id, db)
+    return await _check_project_write(project, current_user, db)
+
+
+async def _get_repository_or_404(
+    repository_id: str,
+    db: AsyncSession
+) -> GitHubRepository:
+    """Get a linked GitHub repository by ID or raise 404"""
+    result = await db.execute(
+        select(GitHubRepository).where(GitHubRepository.id == repository_id)
+    )
+    github_repo = result.scalar_one_or_none()
+
+    if not github_repo:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Repository not found"
+        )
+    return github_repo
+
+
+async def require_repository_access(
+    repository_id: Annotated[str, Path(description="Repository ID")],
+    current_user: Annotated[Optional[User], Depends(get_current_user_optional)],
+    db: DB
+) -> GitHubRepository:
+    """
+    Require read access to a linked GitHub repository.
+    Access is granted via the owning project's team membership.
+    """
+    github_repo = await _get_repository_or_404(repository_id, db)
+    project = await get_project_or_404(github_repo.project_id, db)
+    await _check_project_access(project, current_user, db)
+    return github_repo
+
+
+async def require_repository_write(
+    repository_id: Annotated[str, Path(description="Repository ID")],
+    current_user: Annotated[User, Depends(get_current_user)],
+    db: DB
+) -> GitHubRepository:
+    """
+    Require write access to a linked GitHub repository.
+    Write access is granted via the owning project's team membership.
+    """
+    github_repo = await _get_repository_or_404(repository_id, db)
+    project = await get_project_or_404(github_repo.project_id, db)
+    await _check_project_write(project, current_user, db)
+    return github_repo

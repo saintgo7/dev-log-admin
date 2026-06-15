@@ -7,7 +7,11 @@ from typing import Optional, List
 from fastapi import APIRouter, Depends, HTTPException, Request, Query, Header, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.deps import get_db, get_current_user
+from app.core.deps import (
+    get_db,
+    get_current_user,
+    require_repository_access,
+)
 from app.core.config import settings
 from app.models.user import User
 from app.schemas.github import WebhookEventResponse
@@ -111,8 +115,19 @@ async def list_webhook_events(
     List received webhook events.
 
     Can be filtered by repository, event type, or processing status.
-    Requires authentication.
+    Requires read access to the targeted repository; cross-repository
+    listing (no repository_id) is restricted to admins.
     """
+    # Authorization: scope events to a repository the user can access.
+    # Listing across all repositories is an admin-only operation (IDOR guard).
+    if repository_id:
+        await require_repository_access(repository_id, current_user, db)
+    elif not current_user.is_admin:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="repository_id is required to list webhook events",
+        )
+
     webhook_service = WebhookService(db)
 
     events = await webhook_service.get_webhook_events(
@@ -150,6 +165,9 @@ async def get_webhook_event(
     Get a specific webhook event.
 
     Optionally include the full payload.
+
+    Requires read access to the event's repository; events not linked to
+    a repository are restricted to admins.
     """
     from sqlalchemy import select
     from app.models.github import WebhookEvent
@@ -163,6 +181,17 @@ async def get_webhook_event(
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Webhook event not found",
+        )
+
+    # Authorization: only users with access to the event's repository may
+    # read it (the payload can contain private repo data). Events without a
+    # repository (org-level / unmatched) are admin-only (IDOR guard).
+    if event.repository_id:
+        await require_repository_access(event.repository_id, current_user, db)
+    elif not current_user.is_admin:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Not authorized to access this webhook event",
         )
 
     response = WebhookEventResponse(

@@ -131,13 +131,14 @@ class TestGitHubSyncEndpoints:
         client: AsyncClient,
         auth_headers: dict,
     ):
-        """Test syncing non-existent repository"""
+        """Test syncing non-existent repository returns 404"""
         response = await client.post(
             "/api/v2/github/repositories/non-existent-id/sync",
             headers=auth_headers,
         )
 
-        assert response.status_code == 400
+        # Ownership check loads the repository first -> 404 when missing
+        assert response.status_code == 404
 
     @pytest.mark.asyncio
     async def test_get_sync_status(
@@ -145,16 +146,14 @@ class TestGitHubSyncEndpoints:
         client: AsyncClient,
         auth_headers: dict,
     ):
-        """Test getting sync status for non-existent repository"""
+        """Test getting sync status for non-existent repository returns 404"""
         response = await client.get(
             "/api/v2/github/repositories/non-existent-id/sync/status",
             headers=auth_headers,
         )
 
-        assert response.status_code == 200
-        data = response.json()
-        assert data["is_syncing"] is False
-        assert data["pending_syncs"] == 0
+        # Ownership check loads the repository first -> 404 when missing
+        assert response.status_code == 404
 
 
 class TestWebhookEndpoints:
@@ -238,12 +237,12 @@ class TestWebhookEndpoints:
     async def test_list_webhook_events(
         self,
         client: AsyncClient,
-        auth_headers: dict,
+        admin_auth_headers: dict,
     ):
-        """Test listing webhook events"""
+        """Test listing all webhook events (admin-only, cross-repository)"""
         response = await client.get(
             "/api/v2/webhooks/github/events",
-            headers=auth_headers,
+            headers=admin_auth_headers,
         )
 
         assert response.status_code == 200
