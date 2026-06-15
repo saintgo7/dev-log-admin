@@ -38,7 +38,7 @@ class CommitUpdate(BaseSchema):
 
 class CommitResponse(CommitBase, TimestampSchema):
     """Commit response schema"""
-    id: int
+    id: str
     project_id: str
     log_number: Optional[int] = None
     commit_hash: Optional[str] = None

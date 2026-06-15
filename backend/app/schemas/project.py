@@ -53,7 +53,7 @@ class ProjectWithStats(ProjectResponse):
 
 class CommitSummary(BaseSchema):
     """Brief commit info for project response"""
-    id: int
+    id: str
     title: str
     type: str
     date: datetime

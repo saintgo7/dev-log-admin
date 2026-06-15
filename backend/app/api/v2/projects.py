@@ -290,7 +290,7 @@ async def list_project_commits(
 @router.get("/{project_id}/commits/{commit_id}", response_model=CommitDetail)
 async def get_commit(
     project_id: str,
-    commit_id: int,
+    commit_id: str,
     current_user: CurrentUserOptional,
     db: Annotated[AsyncSession, Depends(get_db)]
 ):
